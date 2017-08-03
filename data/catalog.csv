@@ -1,0 +1,19 @@
+m,s,This pair of sport shoes will suit you well in a rather relaxed ambiance,black_sport_male,black,orientation_1
+m,s,This pair of sport shoes will suit you well in a rather relaxed ambiance,grey_sport_male,grey,orientation_2
+m,s,This pair of sport shoes will suit you well in a rather relaxed ambiance,red_sport_male,red,orientation_3
+m,s,This pair of sport shoes will suit you well in a rather relaxed ambiance,tan_sport_male,tan,orientation_4
+m,d,Those shoes will suit you well in a rather formal ambiance,black_dress_male,black,orientation_1
+m,d,Those shoes will suit you well in a rather formal ambiance,grey_dress_male,grey,orientation_2
+m,d,Those shoes will suit you well in a rather formal ambiance,red_dress_male,red,orientation_3
+m,d,Those shoes will suit you well in a rather formal ambiance,tan_dress_male,tan,orientation_4
+f,s,With these \pau=250\ you can look amazing and trendy while being comfortable,black_sport_female,black,orientation_1
+f,s,With these \pau=250\ you can look amazing and trendy while being comfortable,grey_sport_female,grey,orientation_2
+f,s,With these \pau=250\ you can look amazing and trendy while being comfortable,red_sport_female,red,orientation_3
+f,s,With these \pau=250\ you can look amazing and trendy while being comfortable,tan_sport_female,tan,orientation_4
+f,d,By wearing those elegant designer shoes you will surely leave a lasting impression,black_dress_female,black,orientation_1
+f,d,By wearing those elegant designer shoes you will surely leave a lasting impression,grey_dress_female,grey,orientation_2
+f,d,By wearing those elegant designer shoes you will surely leave a lasting impression,red_dress_female,red,orientation_3
+f,d,By wearing those elegant designer shoes you will surely leave a lasting impression,tan_dress_female,tan,orientation_4
+,,These classic flat white laces are created with a premium weave!,white_shoelace,white
+,,These sleek round black laces are created from premium nylon polymer!,black_shoelace,black
+,,This leather balm conditioner is an all-in-one leather care product!,leather_balm,

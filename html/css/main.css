@@ -1,0 +1,80 @@
+body {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: 0;
+}
+
+html {
+    background-color: white;
+}
+
+#title_bar {
+    height: 15%;
+    background-image: url(../img/white_bannner.png);
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+#title_logo {
+    display: inline-block;
+    height: 100%;
+    width: 70%;
+    z-index: 1000;
+}
+
+#page_content {
+    height: 85%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.bg1 {
+    background: url('../img/avinor_bg-white.png') no-repeat center center fixed;
+}
+
+.bg2 {
+    background: url('../img/avinor_bg-white.png') no-repeat center center fixed;
+}
+
+#page_content > div {
+    height: 100%;
+    width: 100%;
+}
+
+#control_panel {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    margin-left: 100px;
+}
+
+#dialog {
+    display: block;
+}
+
+.animations-row {
+    display: block;
+}
+
+#control_panel input[type="button"] {
+    display: block;
+    padding: 10px;
+    background-color: white;
+    font-size: 22px;
+    border: 2px solid blue;
+    float: left;
+    margin: 20px;
+    width: 210px;
+    height: 195px;
+    border-radius: 10px;
+}
+
+
+.clear{
+    clear: both;
+}

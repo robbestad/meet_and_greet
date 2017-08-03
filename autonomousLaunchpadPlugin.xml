@@ -1,0 +1,7 @@
+<?xml version=’1.0’ encoding=’UTF-8’?>
+<autonomousLaunchpadPlugin>
+  <groups>
+    <group>interactive</group>
+    <group>solitary</group>
+  </groups>
+</autonomousLaunchpadPlugin>
