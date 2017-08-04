@@ -81,8 +81,17 @@ class acando_remote_service:
     @qi.nobind
     def animate(self, value):
         self.logger.info("ANIMATE " + str(value))
-
         self.anim.run(value)
+        try:
+            self.session.service("ALBasicAwareness").setEnabled(True)
+            self.session.service("ALSpeechRecognition").setAudioExpression(True)
+            self.session.service("ALAutonomousMoves").setExpressiveListeningEnabled(True)
+            self.session.service("ALMotion").setBreathEnabled("Body", 1)
+            self.session.service("ALMotion").setIdlePostureEnabled("Head", 1)
+            self.session.service("ALMotion").setIdlePostureEnabled("Arms", 1)
+            self.session.service("ALBackgroundMovement").setEnabled(1)
+        except Exception, e:
+            self.logger.info("Error while enabling...: {}".format(e))
 
     @qi.nobind
     def move(self, value):
@@ -205,9 +214,7 @@ class acando_remote_service:
             self.session.service("ALBasicAwareness").setEnabled(True)
             self.session.service("ALAutonomousMoves").setExpressiveListeningEnabled(True)
             self.session.service("ALMotion").setBreathEnabled("Body", 1)
-            # ALMotion.setBreathEnabled("Body", 0)
             self.session.service("ALMotion").setIdlePostureEnabled("Head", 1)
-            # ALBackgroundMovement.setEnabled(0)
         except Exception, e:
             self.logger.info("Error while enabling movements: {}".format(e))
 

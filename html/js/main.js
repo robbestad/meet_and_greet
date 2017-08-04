@@ -202,6 +202,40 @@ $(document).ready(function (e) {
         });
     });
 
+    $('#anim_button_exhausted').click(function () {
+        if (preventMultipleClick("anim_button_exhausted")) return;
+        session.service("ALMemory").then(function (mem) {
+            mem.raiseEvent("AcandoRemote/Anim", "animations/Stand/Gestures/Wings_1");
+        });
+    });
+    $('#anim_button_sneeze').click(function () {
+        if (preventMultipleClick("anim_button_sneeze")) return;
+        session.service("ALMemory").then(function (mem) {
+            mem.raiseEvent("AcandoRemote/Anim", "animations/Stand/Waiting/AirGuitar_1");
+        });
+    });
+
+    $('#anim_button_calm').click(function () {
+        if (preventMultipleClick("anim_button_calm")) return;
+        session.service("ALMemory").then(function (mem) {
+            mem.raiseEvent("AcandoRemote/Anim", "animations/Stand/Waiting/Binoculars_1");
+        });
+    });
+    $('#anim_button_kisses').click(function () {
+        if (preventMultipleClick("anim_button_kisses")) return;
+        session.service("ALMemory").then(function (mem) {
+            mem.raiseEvent("AcandoRemote/Anim", "animations/Stand/Waiting/Helicopter_1");
+        });
+    });
+    $('#anim_button_salute').click(function () {
+        if (preventMultipleClick("anim_button_salute")) return;
+        session.service("ALMemory").then(function (mem) {
+            mem.raiseEvent("AcandoRemote/Anim", "animations/Stand/Gestures/Salute_1");
+        });
+    });
+
+
+
     function moveForward() {
         session.service("ALMemory").then(function (mem) {
             mem.raiseEvent("AcandoRemote/Move", "forward");

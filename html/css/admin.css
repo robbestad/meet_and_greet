@@ -1,0 +1,46 @@
+#title_bar {
+    background: none;
+}
+
+
+.bg1 {
+    background: none;
+}
+
+.bg2 {
+    background: none;
+}
+
+
+#admin_bar {
+    width: 100%;
+    background: black;
+    height: 100px;
+}
+
+#admin_bar div {
+    width: 50%;
+    height: 80px;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 0 0 0;
+    margin: 0;
+    float: left;
+}
+
+#admin_bar > div > a {
+    color: white;
+    font-size: 26px;
+    font-variant-caps: all-small-caps;
+    text-decoration: none;
+}
+
+#admin_bar > div.checked {
+    background-color: beige;
+}
+
+#admin_bar > div.checked > a {
+    color: black;
+}
+

@@ -83,6 +83,12 @@
         <File name="win32tz" src="lib/vobject/win32tz.py" />
         <File name="translation_en_US" src="translations/translation_en_US.qm" />
         <File name="avinor_bg" src="html/img/avinor_bg.png" />
+        <File name="admin" src="html/admin.html" />
+        <File name="admin_drive" src="html/admin_drive.html" />
+        <File name="admin" src="html/css/admin.css" />
+        <File name="avinor_bg-white" src="html/img/avinor_bg-white.png" />
+        <File name="white_bannner" src="html/img/white_bannner.png" />
+        <File name="talk" src="html/js/talk.js" />
     </Resources>
     <Topics>
         <Topic name="acando_remote_dialog_enu" src="acando_remote_dialog/acando_remote_dialog_enu.top" topicName="acando_remote_dialog" language="en_US" />
