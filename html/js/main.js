@@ -22,7 +22,6 @@ function preventMultipleClick(id) {
 };
 
 var current_item = null;
-var current_timeout = null;
 
 function display(id) {
     new_menu = $(id);
@@ -40,8 +39,6 @@ function display(id) {
 };
 
 var subscriberName = "acando-remote-webpage";
-var theVideoDevice;
-var historyPages = [];
 
 $(document).ready(function (e) {
 
@@ -49,102 +46,11 @@ $(document).ready(function (e) {
         mem.raiseEvent("AcandoRemote/DisableMovements", 1);
     });
 
-
-    $('#speak_button_0').click(function () {
-        if (preventMultipleClick("speak_button_0")) return;
+    $('#speak_button_generic').click(function (text) {
+        debugger
+        if (preventMultipleClick("speak_button_generic")) return;
         session.service("ALMemory").then(function (mem) {
-            mem.raiseEvent("AcandoRemote/Say", 0);
-        });
-    });
-
-    $('#speak_button_1').click(function () {
-        if (preventMultipleClick("speak_button_1")) return;
-        session.service("ALMemory").then(function (mem) {
-            mem.raiseEvent("AcandoRemote/Say", 1);
-        });
-    });
-    $('#speak_button_2').click(function () {
-        if (preventMultipleClick("speak_button_2")) return;
-        session.service("ALMemory").then(function (mem) {
-            mem.raiseEvent("AcandoRemote/Say", 2);
-        });
-    });
-    $('#speak_button_3').click(function () {
-        if (preventMultipleClick("speak_button_3")) return;
-        session.service("ALMemory").then(function (mem) {
-            mem.raiseEvent("AcandoRemote/Say", 3);
-        });
-    });
-    $('#speak_button_4').click(function () {
-        if (preventMultipleClick("speak_button_4")) return;
-        session.service("ALMemory").then(function (mem) {
-            mem.raiseEvent("AcandoRemote/Say", 4);
-        });
-    });
-    $('#speak_button_5').click(function () {
-        if (preventMultipleClick("speak_button_5")) return;
-        session.service("ALMemory").then(function (mem) {
-            mem.raiseEvent("AcandoRemote/Say", 5);
-        });
-    });
-    $('#speak_button_6').click(function () {
-        if (preventMultipleClick("speak_button_6")) return;
-        session.service("ALMemory").then(function (mem) {
-            mem.raiseEvent("AcandoRemote/Say", 6);
-        });
-    });
-    $('#speak_button_7').click(function () {
-        if (preventMultipleClick("speak_button_7")) return;
-        session.service("ALMemory").then(function (mem) {
-            mem.raiseEvent("AcandoRemote/Say", 7);
-        });
-    });
-    $('#speak_button_8').click(function () {
-        if (preventMultipleClick("speak_button_8")) return;
-        session.service("ALMemory").then(function (mem) {
-            mem.raiseEvent("AcandoRemote/Say", 8);
-        });
-    });
-    $('#speak_button_9').click(function () {
-        if (preventMultipleClick("speak_button_9")) return;
-        session.service("ALMemory").then(function (mem) {
-            mem.raiseEvent("AcandoRemote/Say", 9);
-        });
-    });
-    $('#speak_button_10').click(function () {
-        if (preventMultipleClick("speak_button_10")) return;
-        session.service("ALMemory").then(function (mem) {
-            mem.raiseEvent("AcandoRemote/Say", 10);
-        });
-    });
-    $('#speak_button_11').click(function () {
-        if (preventMultipleClick("speak_button_11")) return;
-        session.service("ALMemory").then(function (mem) {
-            mem.raiseEvent("AcandoRemote/Say", 11);
-        });
-    });
-    $('#speak_button_12').click(function () {
-        if (preventMultipleClick("speak_button_12")) return;
-        session.service("ALMemory").then(function (mem) {
-            mem.raiseEvent("AcandoRemote/Say", 12);
-        });
-    });
-    $('#speak_button_13').click(function () {
-        if (preventMultipleClick("speak_button_13")) return;
-        session.service("ALMemory").then(function (mem) {
-            mem.raiseEvent("AcandoRemote/Say", 13);
-        });
-    });
-    $('#speak_button_14').click(function () {
-        if (preventMultipleClick("speak_button_14")) return;
-        session.service("ALMemory").then(function (mem) {
-            mem.raiseEvent("AcandoRemote/Say", 14);
-        });
-    });
-    $('#speak_button_15').click(function () {
-        if (preventMultipleClick("speak_button_15")) return;
-        session.service("ALMemory").then(function (mem) {
-            mem.raiseEvent("AcandoRemote/Say", 15);
+            mem.raiseEvent("AcandoRemote/Say", text);
         });
     });
 
@@ -235,7 +141,6 @@ $(document).ready(function (e) {
     });
 
 
-
     function moveForward() {
         session.service("ALMemory").then(function (mem) {
             mem.raiseEvent("AcandoRemote/Move", "forward");
@@ -305,27 +210,6 @@ $(document).ready(function (e) {
         });
     });
 
-
-    // Exit Button
-    $('#title_exit').click(function () {
-        if (preventMultipleClick("title_exit")) return;
-        session.service("ALMemory").then(function (mem) {
-            mem.raiseEvent("AcandoRemote/Exit", 1);
-        });
-    });
-
-    // Exit Button
-    $('#title_back_arrow').click(function () {
-        if (preventMultipleClick("title_back_arrow")) return;
-        prev = historyPages.pop();
-        if (prev) {
-            display(prev)
-        } else {
-            display("#scan_card");
-        }
-    });
-
-
     session.then(
         function (session) {
             console.log('Qimessaging: connected!');
@@ -335,10 +219,6 @@ $(document).ready(function (e) {
             display("#loading_menu");
         }
     );
-
-    display("#scan_card");
-    historyPages.push("#scan_card");
-
 
     session.subscribeToEvent("AcandoRemote/TabletPage", function (page) {
         display("#" + page);
@@ -357,12 +237,5 @@ $(document).ready(function (e) {
         $("#image_page_content").css("background-image", "url(img/" + product_image + ".png)");
     });
 
-    window.onbeforeunload = function () {
-        VideoUtils.unsubscribeCamera(theVideoDevice, handle)(subscriberName).then(function () {
-            console.log("exited +");
-        }, function () {
-            console.log("exited -");
-        });
-    };
 
 });

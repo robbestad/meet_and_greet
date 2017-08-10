@@ -9,6 +9,7 @@
     <link href="css/admin.css" rel="stylesheet">
 </head>
 
+
 <body>
 
 <div>
@@ -18,45 +19,28 @@
             <a href="admin-texts.html">Tekster</a>
         </div>
 
-        <div>
+        <div  class="checked">
             <a href="admin_talk.html">Snakk</a>
         </div>
 
-        <div class="checked">
+        <div>
             <a href="admin_drive.html">Kjør</a>
         </div>
     </div>
 
     <div class="clear"></div>
-    <div id="move">
-        <input type="button" value="FREM" id="move_forward">
-        <input type="button" value="TILBAKE" id="move_back">
-        <input type="button" value="VENSTRE" id="move_left">
-        <input type="button" value="HØYRE" id="move_right">
-        <input type="button" value="STOPP" id="move_stop">
-        <input type="button" value="SNU-V" id="move_turnleft">
-        <input type="button" value="SNU-H" id="move_turnright">
-    </div>
 
+    <div id="container"></div>
 
 </div>
 
-<div id="page_content" class="bg1">
-
-    <div id="text_page" style="display:none">
-        <div id="text_page_content"></div>
-    </div>
-
-    <div id="image_page" style="display:none">
-        <div id="image_page_content"></div>
-    </div>
-</div>
- qimessaging & jquery stuff
+<!-- qimessaging & jquery stuff -->
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/robotutils.js"></script>
 <script src="js/main.js"></script>
 <script src="js/adjust.js"></script>
-
+<script src="js/sven.js"></script>
+<script src="js/speechbuttons.js"></script>
 
 </body>
 </html>
