@@ -68,6 +68,27 @@ button {
 
 button.subdued {
     background: floralwhite;
+    color: black;
+}
+
+button.danger {
+    background: orangered;
+    color: blue;
+}
+
+.clear {
+    clear: both;
+}
+
+hr {
+    height: 1px;
+    border: none;
+    color: #000;
+    background-color: #000;
+    width: 60%;
+    text-align: left;
+    margin: 0 auto 10px 0;
+
 }
 
 textarea {
