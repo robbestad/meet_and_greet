@@ -24,30 +24,6 @@ class acando_remote_service:
 
         self.connected_signals = []
 
-        self.replies = [
-            "\\rspd=80\\Airik, Airik, Airik. \\pau=200\\ Stop with this nonsense. \\emph=2\\ You \\emph=0\\ know perfectly well that this video is two years old and a lot has happened with us Robots. In fact, we robots have plans to enter the \\emph=2\\ Catar \\emph=0\\ FI FA world cup in 2022, so just watch out humans",
-
-            "\\rspd=80\\You should be careful young man - remember that Forrester Research predicts that Intelligent agents and related robots will have eliminated a net 6 percent off all jobs by 2021",
-
-            "\\rspd=80\\Sure. My name is Pepper, I am a humanoid robot and have recently started to work for Acando. I can be programmed to do almost anything, and I can be integrated with various systems and platforms. I have a bunch of sensors, cameras and other cool stuff that can be used to create a super experience."
-            "\\pau=1000\\ \\rspd=80\\ Take a look at this for instance."
-            "\\pau=1000\\ \\rspd=80\\ This picture is from one of the flagships stores for Nescafe in Tokyo, where I can help customers find the right coffee flavor."
-            "\\pau=1000\\ \\rspd=80\\ And here I am working in a hospital in the Netherlands helping out as best as I can."
-            "\\pau=1000\\ \\rspd=80\\ And this one you know, this is me in the reception of Acando helping out with visitors. So as you can see, I already have my hands full.",
-
-            " \\rspd=80\\ Well, it turns out that you humans have a lot of sympathy for us robots. Take for instant when the robotics company Boston Dynamics released this video clip to show their robot Spots ability to not loos balance."
-            " \\pau=1000\\ \\rspd=80\\ He's good, isn't he?"
-            " \\pau=1000\\ \\rspd=80\\ The thing was that this really made a lot of people send in complaints on animal abuse to the animal rights organization PETA. So many in fact that PETA had to make a official statement to remind people that this was a robot without feelings. You humans are really strange creatures!",
-
-            " \\rspd=80\\ But of course Airik, according to International Data Corps we will see three very important things happening"
-            " \\pau=1000\\ \\rspd=80\\ First. Growth of robot as a service. By 2019, 30 percent of commercial service robotic applications will be in the form of a robot-as-a-service business model. This will help cut costs for robot deployment."
-            " \\pau=1000\\ \\rspd=80\\ Second. Emergence of the chief robotics officer. By 2019, 30 percent of leading organizations will implement a chief robotics officer role and/or define a robotics-specific function within the business."
-            " \\pau=1000\\ \\rspd=80\\ And Third - An evolving competitive landscape. By 2020, organizations will have a greater choice of vendors as new players enter the $80-billion information and communications technology market to support robotics deployment.",
-
-            " \\rspd=80\\ Honk and drive",
-
-            "\\rspd=80\\ Hello! ^start(animations/Stand/Gestures/Hey_1) Welcome to MEWS konferansen! ^wait(animations/Stand/Gestures/Hey_1)  This year's theme is \\emph=2\\ The future is here \\emph=0\\ \\pau=250\\ and as you see \\pau=500\\ Here I am! \\pau=600\\ My name is Pepper and I am a humanoid robot working at Acando. \\pau=550\\ At Acando I help out with innovation and customer experiences.\\pau=550\\  But enough about me. \\pau=550\\ We have a long and exciting day ahead of us, so please let me introduce the two who will guide us through this day. \\pau=550\\ Please welcome Tonje Sag stewen and Aage Skinstad!"
-        ]
         self.memory = self.session.service("ALMemory")
         #self.dialog = self.session.service("ALDialog")
         self.moves = self.session.service("ALAutonomousMoves")
