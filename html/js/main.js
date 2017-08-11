@@ -38,19 +38,16 @@ function display(id) {
     }
 };
 
-var subscriberName = "acando-remote-webpage";
-
 $(document).ready(function (e) {
 
     session.service("ALMemory").then(function (mem) {
         mem.raiseEvent("AcandoRemote/DisableMovements", 1);
     });
 
-    $('#speak_button_generic').click(function (text) {
-        debugger
+    $('.speak_button_generic').click(function (e) {
         if (preventMultipleClick("speak_button_generic")) return;
         session.service("ALMemory").then(function (mem) {
-            mem.raiseEvent("AcandoRemote/Say", text);
+            mem.raiseEvent("AcandoRemote/Say", e.target.textContent);
         });
     });
 
@@ -216,12 +213,12 @@ $(document).ready(function (e) {
         },
         function () {
             console.error('Qimessaging: disconnected!');
-            display("#loading_menu");
+            // display("#loading_menu");
         }
     );
 
     session.subscribeToEvent("AcandoRemote/TabletPage", function (page) {
-        display("#" + page);
+        // display("#" + page);
         historyPages.push("#" + page);
     });
 

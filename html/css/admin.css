@@ -51,7 +51,9 @@ body {
 }
 
 button {
-    margin: 0 0 15px 0;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 10px;
     border: 1px solid grey;
     background: ghostwhite;
     font-size: 100%;
@@ -69,15 +71,25 @@ button {
 button.subdued {
     background: floralwhite;
     color: black;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
 }
 
 button.danger {
     background: orangered;
-    color: blue;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 10px;
 }
 
 .clear {
     clear: both;
+}
+
+.clear.padded{
+    margin-top: 10px;
 }
 
 hr {

@@ -118,16 +118,7 @@ class acando_remote_service:
     @qi.nobind
     def say_something(self, value):
         self.logger.info("SAY SOMETHING " + str(value))
-
-        if (value <= 4):
-            self.ttsa.say(self.replies[value], self.configuration)
-
-        if (value == 5):
-            self.ttsa.say(self.replies[value], self.configuration)
-            self.anim.run("animations/Stand/Emotions/Positive/Winner_1")
-
-        if (value > 5):
-            self.ttsa.say(self.replies[value], self.configuration)
+        self.ttsa.say(value, self.configuration)
 
     @qi.nobind
     def stop_app(self):

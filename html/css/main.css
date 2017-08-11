@@ -5,6 +5,7 @@ body {
     right: 0;
     position: absolute;
     margin: 0;
+    background-color: black;
 }
 
 html {
@@ -13,7 +14,7 @@ html {
 
 #title_bar {
     height: 15%;
-    background-image: url(../img/white_bannner.png);
+    background-image: url(../img/black_banner.png);
     background-repeat: no-repeat;
     z-index: 0;
 }
@@ -34,11 +35,11 @@ html {
 }
 
 .bg1 {
-    background: url('../img/avinor_bg-white.png') no-repeat center center fixed;
+    background: url('../img/itch_bg.png') no-repeat center center fixed;
 }
 
 .bg2 {
-    background: url('../img/avinor_bg-white.png') no-repeat center center fixed;
+    background: url('../img/itch_bg.png') no-repeat center center fixed;
 }
 
 #page_content > div {
